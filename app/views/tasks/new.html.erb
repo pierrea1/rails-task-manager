@@ -1,0 +1,21 @@
+<h1>Tasks#new</h1>
+<p>Find me in app/views/tasks/new.html.erb</p>
+
+<!-- <form action="/tasks" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="name">name: </label>
+  <input type="text" name="task[name]" placeholder="name">
+  <label for="details">details: </label>
+  <input type="text" name="task[details]" placeholder="details">
+  <input type="submit">
+</form> -->
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+
+  <%= f.submit %>
+<% end %>
